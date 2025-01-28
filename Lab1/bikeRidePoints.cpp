@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int bike()
 {
     int rides;
     int points;
@@ -21,36 +21,29 @@ int main()
         cin >> rides;
     }
     
-    if (rides == 0)
+    switch(rides)
     {
-        points = 0;
-        cout << "You earned " << points << " this semester" << endl;
+        case 0:
+            points = 0;
+            break;
+        case 1:
+            points = 3;
+            break;
+        case 2:
+            points = 10;
+            break;
+        case 3:
+            points = 15;
+            break;
+        case 4:
+            points = 30;
+            break;
+        default:
+            points = 50;
+            break;
     }
-    else if (rides == 1)
-    {
-        points = 3;
-        cout << "You earned " << points << " this semester" << endl;
-    }
-    else if (rides == 2)
-    {
-        points = 10;
-        cout << "You earned " << points << " this semester" << endl;
-    }
-    else if (rides == 3)
-    {
-        points = 15;
-        cout << "You earned " << points << " this semester" << endl;
-    }
-    else if (rides == 4)
-    {
-        points = 30;
-        cout << "You earned " << points << " this semester" << endl;
-    }
-    else if (rides >= 5)
-    {
-        points = 50;
-        cout << "You earned " << points << " this semester" << endl;
-    }
+    
+    cout << "You earned " << points << " points this semester" << endl;
 
     return 0;
 }
